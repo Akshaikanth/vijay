@@ -7,7 +7,7 @@ scanf("%d",&number);
 for(i=1;i<=5;i++)
 {
 sum=number*i;
-printf("%d ",sum);
+printf("%d",sum);
 }
 getch();
 }
