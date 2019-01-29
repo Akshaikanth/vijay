@@ -1,30 +1,21 @@
-#include <stdio.h>
-#include<conio.h>
-int main()
+#include<stdio.h>
+void main()
 {
-   int l, h, i, flag;
-    printf("Enter two numbers(intervals): ");
-    scanf("%d %d", &l, &h);
-
-    printf("Prime numbers between %d and %d are: ", l,h);
-
-    while (l<h)
-    {
-        flag = 0;
- for(i = 2; i <= l/2; ++i)
-        {
-            if(l % i == 0)
-            {
-                flag = 1;
-                break;
-            }
-        }
-
-        if (flag == 0)
-        {
-         printf("%d ", l);
-++l;
+int a,b,i,j,count=0;
+scanf("%d %d",&a,&b);  
+for(i=a+1;i<=b;i++)    
+{
+for(j=1;j<=i;j++)
+{
+if(i%j==0)      
+{
+count++;
 }
-    }
- return 0;
+}
+if(count==2)
+{
+printf("%d",i);
+}
+count=0;
+}
 }
