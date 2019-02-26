@@ -1,19 +1,16 @@
-#include<stdio.h>
-int main()
+#include <stdio.h>
+#include<math.h>
+int main(void)
 {
-int n,i,arr[n];
-clrscr();
-printf("Enter the no.of elements:\n");
-scanf("%d\n",&n);
-printf("Enter number %d:\n",i+1)
-scanf("%d\n",arr[i]);
-for(i=1;i<=n;i++)
+int a,b,lcm,gcd;
+scanf("%d %d",&a,&b);
+for(int i=2;i<=a&&i<=b;i++)
 {
-if(arr[0]<arr[i])
+if(a%i==0 && b%i==0)
 {
-arr[0]=arr[i];
+gcd=i;
 }
-printf("The maximun element is %d:\n",arr[0]);
 }
+printf("%d %d",gcd,gcd);
 return 0;
 }
