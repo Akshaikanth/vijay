@@ -1,25 +1,20 @@
-#include<stdio.h>
-void main()
+#include <stdio.h>
+ void main()
 {
-int n,temp,i,j,a[20];
-printf("enter the array of numbers");
-scanf("%d",&n);
-printf("enter the numbers");
-for(i=0;i<=n;i++)
-{
-scanf("%d",&a[i]);
-}
-for(i=0;i<=n;i++)
-{
-for(j=i+1;j<=n;j++)
-{
-if(a[i]>a[j])
-{
-temp=a[i];
-a[i]=a[j];
-a[j]=temp;
-}
-}
-}
-printf("%d",a[0]);
+ int array[100], maximum, size, i, location = 1;
+ printf("Enter the number of elements in array");
+ scanf("%d", &size);
+ printf("Enter %d integers", size);
+ for (i = 0; i < size; i++)
+ scanf("%d", &array[i]);
+ minimum = array[0];
+ for (i = 1; i < size; i++)
+ {
+ if (array[i] < minimum)
+ {
+ maximum  = array[i];
+ location = i+1;
+ }
+ }
+ printf("%d", maximum);
 }
