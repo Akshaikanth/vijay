@@ -1,19 +1,25 @@
 #include<stdio.h>
-int main()
+void main()
 {
-int a[10],temp;
-int i;
-for(i=0;i<10;i++)
+int n,temp,i,j,a[20];
+printf("enter the array of numbers");
+scanf("%d",&n);
+printf("enter the numbers");
+for(i=0;i<=n;i++)
 {
 scanf("%d",&a[i]);
 }
-temp=a[0];
-for(i=0;i<10;i++)
+for(i=0;i<=n;i++)
 {
-if(a[0]>a[i])
+for(j=i+1;j<=n;j++)
 {
-temp=a[i]);
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
 }
-printf("the largest number is %d",temp);
 }
+}
+printf("%d",a[0]);
 }
